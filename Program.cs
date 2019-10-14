@@ -9,7 +9,7 @@ namespace nocon_runner
         static void Main(string[] args)
         {
             if (args.Length==0) {
-                Console.WriteLine("Usage: nocon-runner <COMMAND> [ARGS]");
+                Console.WriteLine("Usage: nocon-runner <COMMAND> [<ARG1>[ <ARG2>[ <ARGN>]]]");
                 return;
             }
 
@@ -19,7 +19,6 @@ namespace nocon_runner
             StringBuilder sbCommand = new StringBuilder(command);
 
             if (args.Length > 1) {
-                Console.WriteLine("I'm in");
                 arguments = new string[args.Length - 1];
                 Array.Copy(args, 1, arguments, 0, arguments.Length);
                 sbCommand.Append(" ");
@@ -28,7 +27,7 @@ namespace nocon_runner
 
             Process process = new Process();
             ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            startInfo.CreateNoWindow = true;
             startInfo.FileName = "cmd.exe";
             startInfo.Arguments = "/C " + sbCommand.ToString();
             process.StartInfo = startInfo;
