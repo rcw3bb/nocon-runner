@@ -28,8 +28,8 @@ namespace nocon_runner
             Process process = new Process();
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.CreateNoWindow = true;
-            startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C " + sbCommand.ToString();
+            startInfo.FileName = command;
+            startInfo.Arguments = string.Join(" ", args);
             process.StartInfo = startInfo;
             process.Start();
         }
