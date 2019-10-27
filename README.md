@@ -42,7 +42,7 @@ If you don't want to create a shortcut, you can create a configuration file the 
 
 4. Inside the conf folder, create a **nocon.json** file.
 
-   ###### The nocon.json has the following format:
+	###### The nocon.json has the following format:
 
    ```json
    {
@@ -57,15 +57,15 @@ If you don't want to create a shortcut, you can create a configuration file the 
 
    > Now, when you double click the nocon-runner.exe, it will run the command you specified from the nocon.json file without opening the console.
 
-## Build
+## Author
 
-Generate the executable using the following:
+* Ronaldo Webb
 
-```
-dotnet publish -r win-x64 -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true
-```
+## License
 
-*Note: Use **.Net Core 3 SDK** upon building*
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## [Build](BUILD.md)
 
 ## [Changelog](CHANGELOG.md)
 
