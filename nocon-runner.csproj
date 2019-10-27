@@ -6,6 +6,8 @@
     <RootNamespace>nocon_runner</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>rne.ico</ApplicationIcon>
+    <VersionPrefix>1.2.0</VersionPrefix>
+    <VersionSuffix>SNAPSHOT</VersionSuffix>
   </PropertyGroup>
 
   <ItemGroup>
