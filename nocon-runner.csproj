@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <RootNamespace>nocon_runner</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>rne.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
