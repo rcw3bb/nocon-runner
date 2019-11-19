@@ -1,0 +1,14 @@
+plugins {
+  id "xyz.ronella.dotnet.core" version "1.0.0-GA"
+}
+
+dotnetClean {
+  doLast {
+    delete 'bin'
+    delete 'obj'
+  }
+}
+
+dotnetPublish {
+  args = ['-r', 'win-x64', '-c', 'Release', '/p:PublishSingleFile=true', '/p:PublishTrimmed=true']
+}
